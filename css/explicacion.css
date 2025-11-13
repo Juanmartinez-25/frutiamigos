@@ -1,0 +1,220 @@
+/* ======= Estilos base ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ======= NAVBAR ======= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0078d7;
+  padding: 1rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+
+/* ====== Botón menú móvil ====== */
+.menu-btn {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ======= HEADER ======= */
+.header {
+  background-color: #0078d7;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* ======= Contenedor principal ======= */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* ======= Secciones ======= */
+section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= Ejemplo Flexbox ======= */
+#flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.box {
+  background-color: #0078d7;
+  color: white;
+  font-weight: bold;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.box:hover {
+  background-color: #005fa3;
+}
+
+/* Controles */
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  background-color: #0078d7;
+  border: none;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background-color: #005fa3;
+}
+
+/* ======= Toggle demo ======= */
+.toggle-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#demo-text {
+  background-color: #f0f0f0;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Clase activa */
+#demo-text.activo {
+  background-color: #0078d7;
+  color: white;
+  transform: scale(1.1);
+}
+
+#toggle-btn {
+  background-color: #ff9800;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+}
+
+#toggle-btn:hover {
+  background-color: #e68900;
+}
+
+/* ======= Footer ======= */
+footer {
+  text-align: center;
+  background-color: #0078d7;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ======= RESPONSIVIDAD ======= */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  #flex-container {
+    flex-wrap: wrap;
+  }
+
+  .box {
+    width: 60px;
+    padding: 1.5rem;
+  }
+
+  /* Navbar responsiva */
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #0078d7;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 0.5rem 0;
+  }
+}

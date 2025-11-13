@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fruteame - Registrar Pedido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/FrutiInicio.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="menu-btn" aria-label="Abrir menú">☰</button>
+      <div class="brand"><span class="brand-script">Fruteame</span></div>
+      <nav class="nav-menu">
+        <a href="/html/index.html" class="inicio-btn">Inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="card login-card" aria-labelledby="pedido-title">
+      <h1 id="pedido-title" class="card-title">Registrar Pedido</h1>
+
+      <form class="form" id="pedidoForm" action="#" method="post" novalidate>
+        <label class="field">
+          <span class="field-label">Nombre del cliente</span>
+          <input class="input" name="nombre" type="text" placeholder="Ej: Juan Pérez" required />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Correo electrónico</span>
+          <input class="input" name="correo" type="email" placeholder="Ej: juan@gmail.com" required />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Teléfono</span>
+          <input class="input" name="telefono" type="tel" placeholder="Ej: 3001234567" required />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Producto o fruta</span>
+          <select class="input" name="producto" required>
+            <option value="">Selecciona una opción...</option>
+            <optgroup label="🥗 Ensaladas de Frutas con Yogurt y Crema">
+              <option value="Fruta Cereza">Fruta Cereza</option>
+              <option value="Fruta Mix">Fruta Mix</option>
+              <option value="Fruta Especial">Fruta Especial</option>
+            </optgroup>
+
+            <optgroup label="🍓 Ensaladas de Frutas">
+              <option value="Ensalada Fruta Simple">Ensalada Fruta Simple</option>
+              <option value="Ensalada Premium">Ensalada Premium</option>
+              <option value="Ensalada Familiar">Ensalada Familiar</option>
+            </optgroup>
+
+            <optgroup label="🥭 Parfait">
+              <option value="Parfait Mango">Parfait Mango</option>
+              <option value="Parfait Fresa">Parfait Fresa</option>
+              <option value="Parfait Cereza">Parfait Cereza</option>
+            </optgroup>
+
+            <optgroup label="🍹 Copas y Fresas">
+              <option value="Copa Cereza">Copa Cereza</option>
+              <option value="Copa Fresa">Copa Fresa</option>
+              <option value="Fresas con crema">Fresas con crema</option>
+              <option value="Fresas con lechera">Fresas con lechera</option>
+              <option value="Fresas con crema y lechera">Fresas con crema y lechera</option>
+              <option value="Fresas con crema, lechera y helado">Fresas con crema, lechera y helado</option>
+            </optgroup>
+
+            <optgroup label="🍰 Variantes y Postres">
+              <option value="Fruti Cereza">Fruti Cereza</option>
+              <option value="Fruti Mora">Fruti Mora</option>
+              <option value="Parfait Fresa">Parfait Fresa</option>
+              <option value="Cheesecake Fresa">Cheesecake Fresa</option>
+            </optgroup>
+          </select>
+        </label>
+
+        <label class="field">
+          <span class="field-label">Cantidad</span>
+          <input class="input" name="cantidad" type="number" min="1" placeholder="Ej: 2" required />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Observaciones</span>
+          <textarea class="input" name="observaciones" rows="3" placeholder="Ej: Sin granola, por favor..."></textarea>
+        </label>
+
+        <button class="btn-primary" type="submit">ENVIAR PEDIDO</button>
+      </form>
+
+      <p id="mensaje-confirmacion" class="muted"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <strong>Fruteame</strong> — Pedidos</p>
+    </div>
+  </footer>
+
+  <script src="/js/frutiInicio.js"></script>
+</body>
+</html>

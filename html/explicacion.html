@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox y classList.toggle()</title>
+  <link rel="stylesheet" href="/css/explicacion.css">
+</head>
+<body>
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar">
+    <div class="logo">Flex & Toggle</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/html/index.html">Inicio</a></li>
+     
+    </ul>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </nav>
+
+  <!-- ====== HEADER ====== -->
+  <header class="header" id="inicio">
+    <h1>Guía práctica: Flexbox y classList.toggle()</h1>
+  </header>
+
+  <main class="container">
+    <!-- ===================== FLEXBOX ===================== -->
+    <section class="info" id="flexbox">
+      <h2>¿Qué es Flexbox?</h2>
+      <p>
+        Flexbox es un módulo de CSS que facilita la organización, alineación y distribución del espacio entre los elementos de una página web. 
+        Su ventaja principal es que permite acomodar los elementos de forma flexible, ya sea en fila (<b>row</b>) o en columna (<b>column</b>), 
+        usando la propiedad <code>display: flex</code>.
+      </p>
+      <p>
+        Flexbox trabaja con dos ejes:
+      </p>
+      <ul>
+        <li><b>Eje principal:</b> definido por <code>flex-direction</code>.</li>
+        <li><b>Eje secundario:</b> perpendicular al principal.</li>
+      </ul>
+    </section>
+
+    <!-- Ejemplo práctico Flexbox -->
+    <section class="examples">
+      <h2>Ejemplo funcional de Flexbox</h2>
+      <p>Haz clic en los botones para cambiar la dirección del eje principal:</p>
+
+      <div class="controls">
+        <button id="row-btn">Fila (row)</button>
+        <button id="column-btn">Columna (column)</button>
+      </div>
+
+      <div id="flex-container" class="flex-row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+    </section>
+
+    <!-- ===================== CLASSLIST.TOGGLE ===================== -->
+    <section class="toggle-section" id="toggle">
+      <h2>Explicación del método <code>classList.toggle()</code></h2>
+      <p>
+        El método <code>classList.toggle()</code> en JavaScript sirve para <b>añadir o quitar una clase CSS</b> a un elemento HTML automáticamente.
+        Si el elemento ya tiene la clase, la quita; si no la tiene, la añade.
+      </p>
+      <p>
+        Por ejemplo:
+      </p>
+      <pre><code>miElemento.classList.toggle('activo');</code></pre>
+      <p>
+        Esto es muy útil para efectos visuales, botones de “Me gusta”, menús desplegables o animaciones.
+      </p>
+
+      <!-- Ejemplo funcional -->
+      <div class="toggle-demo">
+        <p id="demo-text">Haz clic en el botón para cambiar mi color 👇</p>
+        <button id="toggle-btn">Alternar clase</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Ejemplo educativo - Flexbox y classList.toggle()</p>
+  </footer>
+
+  <script src="/js/explicacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #6d28d9, #7c3aed);
+  color: white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+/* Header */
+.site-header {
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand-script {
+  font-family: "Pacifico", cursive;
+  font-size: 1.6rem;
+}
+
+/* Botón Inicio */
+.inicio-btn {
+  background: #1e90ff;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.inicio-btn:hover {
+  background: #3b82f6;
+}
+
+/* Menú hamburguesa */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* Formulario */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.card {
+  background: #7c3aed;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #f3f4f6;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 1rem;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #3b82f6;
+}
+
+.muted {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+select.input, textarea.input {
+  font-family: "Poppins", sans-serif;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+select.input:focus, textarea.input:focus {
+  outline: 2px solid #1e90ff;
+}
+
+/* --- RESPONSIVIDAD --- */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #5b21b6;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .inicio-btn {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
